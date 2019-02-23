@@ -5,6 +5,7 @@
  */
 package client;
 
+import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -36,5 +37,6 @@ public class socketCliente {
         } catch (IOException ex) {
             System.out.println("Error!: No se pudo establecer una conexion con el servidor especificado.");
         }
+        Gson g= new Gson();
     }
 }
