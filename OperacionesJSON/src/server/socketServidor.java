@@ -11,6 +11,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.JSONObject;
 
 /**
  *
@@ -27,6 +28,11 @@ public class socketServidor {
             System.out.println("Leyendo mensaje...");
             System.out.println((String)entrada.readObject());
             
+            // JSON
+            JSONObject obj = new JSONObject("{\"name\": \"John\"}");
+
+System.out.println(obj.getString("name")); //John
+
         } catch (IOException ex) {
             System.out.println("Error!: No se pudo inicializar el servidor.");
         } catch (ClassNotFoundException ex) {

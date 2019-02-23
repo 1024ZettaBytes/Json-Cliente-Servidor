@@ -5,15 +5,17 @@
  */
 package client;
 
-import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.JSONObject;
 
 
 /**
@@ -37,6 +39,8 @@ public class socketCliente {
         } catch (IOException ex) {
             System.out.println("Error!: No se pudo establecer una conexion con el servidor especificado.");
         }
-        Gson g= new Gson();
+        String data = ""; 
+    data = new String(Files.readAllBytes(Paths.get("RUta"))); 
+       
     }
 }
